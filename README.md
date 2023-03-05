@@ -29,4 +29,4 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Um site para
 </table>
 
 ## :dart: Status do projeto
-* Em construção.
+* Em andamento.
