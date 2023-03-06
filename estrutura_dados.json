@@ -12,7 +12,7 @@
 	"tasks": {
 		"item": "Fazer trabalho de Código Alta Performance",
 		"id": 12345,
-		"situation": True,
+		"situation": "Feito",
 		"id": 123
 	}
 }
