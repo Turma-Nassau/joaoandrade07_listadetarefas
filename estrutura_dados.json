@@ -1,18 +1,18 @@
 {
 	"user": {
-		"name" : "Fulano de Tal",
-		"email" : "seila@site.com",
-		"password" : "ABCDEFGH"
+		"name" : String,
+		"email" : String,
+		"password" : String
 	},
 	"collections":{
-		"title" : "Trabalhos da Faculdade",
-		"id" : 123,
-		"email" : "seila@site.com"
+		"title" : String,
+		"id" : Int,
+		"email" : String
 	},
 	"tasks": {
-		"item": "Fazer trabalho de Código Alta Performance",
-		"id": 12345,
-		"situation": "Feito",
-		"id": 123
+		"item": String,
+		"id": Int,
+		"situation": Boolean,
+		"id": Int
 	}
 }
