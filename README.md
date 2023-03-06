@@ -12,6 +12,11 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Um site para
 * Javascript
 * Node.JS
 
+## :satellite_orbital: API's
+* <b>User API </b>: ela vai ser usada para fazer e verificar login, cadastrar novos usuários, e modificar seus dados.
+* <b>Colections API </b>: vai ser usada para criar as coleções da tarefas, além de poder modifica-las, exclui-las e adiciona-las.
+* <b>Tasks API </b>: vai ser usada para criar as tarefas, além de modifica-las, exclui-las e adiciona-las.
+
 ## :soon: Implementação futura
 * Projeto poderá conter algumas alterações de melhorias.
 
