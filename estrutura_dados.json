@@ -1,0 +1,18 @@
+{
+	"user": {
+		"name" : "Fulano de Tal",
+		"email" : "seila@site.com",
+		"password" : "ABCDEFGH"
+	},
+	"collections":{
+		"title" : "Trabalhos da Faculdade",
+		"id" : 123,
+		"email" : "seila@site.com"
+	},
+	"tasks": {
+		"item": "Fazer trabalho de Código Alta Performance",
+		"id": 12345,
+		"situation": True,
+		"id": 123
+	}
+}
