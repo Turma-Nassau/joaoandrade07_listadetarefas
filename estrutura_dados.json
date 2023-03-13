@@ -1,18 +1,18 @@
 {
-	"user": {
-		"name" : string,
-		"email" : string,
-		"password" : string
+	user: {
+		name : string,
+		email : string,
+		password : string
 	},
-	"collections":{
-		"title" : string,
-		"id_collections" : int,
-		"email" : string
+	collections:{
+		title : string,
+		id_collections : int,
+		email : string
 	},
-	"tasks": {
-		"item": string,
-		"id_tasks": int,
-		"situation": boolean,
-		"id_collections": int
+	tasks: {
+		item: string,
+		id_tasks: int,
+		situation: boolean,
+		id_collections: int
 	}
 }
