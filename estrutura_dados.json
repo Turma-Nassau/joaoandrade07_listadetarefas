@@ -6,13 +6,13 @@
 	},
 	"collections":{
 		"title" : string,
-		"id" : int,
+		"id_collections" : int,
 		"email" : string
 	},
 	"tasks": {
 		"item": string,
-		"id": int,
+		"id_tasks": int,
 		"situation": boolean,
-		"id": int
+		"id_collections": int
 	}
 }
