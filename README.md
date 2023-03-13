@@ -33,5 +33,40 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Um site para
   </tr>
 </table>
 
+## :game_die: Estrutura de dados
+- Usuário
+  - Fazer cadastro, e login
+  
+```s
+  user= {
+		name : string,
+		email : string,
+		password : string
+	}
+```
+
+- Coleções
+  - Criar, apagar e modificar coleções de tarefas
+  
+```s
+  collections= {
+		title : string,
+		id_collections : int,
+		email : string
+	}
+```
+
+- Tarefas
+  - Criar, apagar, modificar e marcar como concluídas as tarefas
+  
+```s
+  tasks= {
+		item: string,
+		id_tasks: int,
+		situation: boolean,
+		id_collections: int
+	}
+```
+
 ## :dart: Status do projeto
 * Em andamento.
