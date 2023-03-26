@@ -38,11 +38,12 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Um site para
 
 ## :game_die: Estrutura de dados
 - Usuário
-  - Fazer cadastro, e login
+  - Criar, apagar e modificar cadastro, e fazer login
   
 ```s
   user= {
 		name : string,
+		surname : string,
 		email : string,
 		password : string
 	}
