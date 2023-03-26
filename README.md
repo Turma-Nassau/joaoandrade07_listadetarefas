@@ -38,7 +38,7 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Um site para
 
 ## :game_die: Estrutura de dados
 - Usuário
-  - Criar, apagar e modificar cadastro, e fazer login
+  - Criar, apagar e modificar usuário, e fazer login
   
 ```s
   user= {
