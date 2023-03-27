@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const { urlencoded } = require('body-parser');
-const fs = require('fs')
+const fs = require('fs');
 var PORT = 8000;
+const db = require('./database');
 
 app.use(bodyParser.json())
 
