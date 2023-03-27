@@ -1,0 +1,18 @@
+{
+  "name": "lista_de_tarefas",
+  "version": "1.0.0",
+  "description": "Aplicativo web de lista de tarefas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "João Andrade",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.30.0",
+    "sequelize-cli": "^6.6.0",
+    "sqlite3": "^5.1.6"
+  }
+}
