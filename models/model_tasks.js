@@ -1,17 +1,34 @@
-const Sequelize = require("sequelize");
+const { DataTypes } = require("sequelize");
+const db = require("../database");
+const Collections = require("./model_collections");
 
-const User = Sequelize.define("user", {
-  id_task: {
-      type: Sequelize.STRING,
+const Tasks = db.define("tasks", {
+  id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       primaryKey:true
   },
   item: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false
   },
   situation: {
-      type: Sequelize.BOOLEAN,
+      type: DataTypes.BOOLEAN,
       allowNull: false
   },
 });
+
+//Tasks.belongsTo(Collections);
+
+(async () => {
+    db.sync()
+        .then(() => {
+            console.log("Tabela tasks criada com sucesso!");
+        })
+        .catch((error) => {
+            console.log("Não foi possível criar a tabela: ", error);
+        });
+})();
+
+module.exports = Tasks;
