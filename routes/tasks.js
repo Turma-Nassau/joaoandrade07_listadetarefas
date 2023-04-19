@@ -7,9 +7,9 @@ const db = require("../database");
 
 router.get("/", controller.getAll);
 
-router.post("/", controller.createTask);
+router.get("/:idCollections", controller.getTaskByFk);
 
-//router.get("/:id", controller.getTaskById);
+router.post("/", controller.createTask);
 
 router.patch("/:id", controller.updateTask);
 

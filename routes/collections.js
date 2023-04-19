@@ -7,9 +7,9 @@ const db = require("../database");
 
 router.get("/", controller.getAll);
 
-router.post("/", controller.createCollection);
+router.get("/:emailUser", controller.getCollectionByFk);
 
-//router.get("/:id", controller.getCollectionById);
+router.post("/", controller.createCollection);
 
 router.patch("/:id", controller.updateCollection);
 

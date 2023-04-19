@@ -1,7 +1,6 @@
 const { DataTypes } = require("sequelize");
 const db = require("../database");
-// const Tasks = require("./model_tasks");
-// const User = require("./model_user");
+const User = require("./model_user");
 
 const Collections = db.define("collections", {
     id: {
@@ -15,11 +14,17 @@ const Collections = db.define("collections", {
         allowNull: false
     },
     
-}, { sequelize, modelName: 'tasks' }); 
+}); 
 
 
-// Collections.belongsTo(User);
-// Collections.hasMany(Tasks);
+Collections.belongsTo(User, {
+    constraints: true,
+    foreignKey: 'emailUser',
+});
+
+User.hasMany(Collections, {
+    foreignKey: 'emailUser',
+});
 
 (async () => {
     db.sync()

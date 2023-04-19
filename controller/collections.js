@@ -11,20 +11,24 @@ controller.getAll = async (req, res) => {
   }
 };
 
-// controller.getCollectionById = async (req, res) => {
-//   console.log("Collection By Id");
-//   console.log(req.params);
-//   await collectionsModel
-//     .findByPk(req.params.id)
-//     .then((data) => {
-//       res.status(201).json({
-//         data,
-//       });
-//     })
-//     .catch((error) => {
-//       res.status(404).json({ message: error});
-//     });
-// };
+controller.getCollectionByFk = async (req, res) => {
+  console.log("Collection By Fk");
+  console.log(req.params);
+  await collectionsModel
+    .findAll({
+      where: {
+        emailUser: req.params.emailUser,
+      }
+    })
+    .then((data) => {
+      res.status(201).json({
+        data,
+      });
+    })
+    .catch((error) => {
+      res.status(404).json({ message: error});
+    });
+};
 
 controller.createCollection = async (req, res) => {
   console.log("Em createCollection");
@@ -32,6 +36,7 @@ controller.createCollection = async (req, res) => {
   await collectionsModel
     .create({
       title: req.body.title,
+      emailUser: req.body.emailUser,
     })
     .then((data) => {
       res.status(201).json({
@@ -46,7 +51,7 @@ controller.createCollection = async (req, res) => {
 controller.deleteCollection = async (req, res) => {
   console.log("Delete Collection");
   await collectionsModel
-    .delete({
+    .destroy({
       where: {
         id: req.params.id,
       }

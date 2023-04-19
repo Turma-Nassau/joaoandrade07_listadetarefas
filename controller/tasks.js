@@ -11,20 +11,24 @@ controller.getAll = async (req, res) => {
   }
 };
 
-// controller.getTaskById = async (req, res) => {
-//   console.log("Task By Id");
-//   console.log(req.params);
-//   await tasksModel
-//     .findByPk(req.params.id)
-//     .then((data) => {
-//       res.status(201).json({
-//         data,
-//       });
-//     })
-//     .catch((error) => {
-//       res.status(404).json({ message: error});
-//     });
-// };
+controller.getTaskByFk = async (req, res) => {
+  console.log("Task By Fk");
+  console.log(req.params);
+  await tasksModel
+    .findAll({
+      where: {
+        idCollections: req.params.idCollections,
+      }
+    })
+    .then((data) => {
+      res.status(201).json({
+        data,
+      });
+    })
+    .catch((error) => {
+      res.status(404).json({ message: error});
+    });
+};
 
 controller.createTask = async (req, res) => {
   console.log("Em createTask");
@@ -33,6 +37,7 @@ controller.createTask = async (req, res) => {
     .create({
       item: req.body.item,
       situation: req.body.situation,
+      idCollections: req.body.idCollections,
     })
     .then((data) => {
       res.status(201).json({
@@ -47,7 +52,7 @@ controller.createTask = async (req, res) => {
 controller.deleteTask = async (req, res) => {
   console.log("Delete Task");
   await tasksModel
-    .delete({
+    .destroy({
       where: {
         id: req.params.id,
       }

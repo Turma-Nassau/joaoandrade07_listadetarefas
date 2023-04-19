@@ -49,7 +49,7 @@ controller.createUser = async (req, res) => {
 controller.deleteUser = async (req, res) => {
   console.log("Delete User");
   await userModel
-    .delete({
+    .destroy({
       where: {
         email: req.params.email,
       }

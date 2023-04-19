@@ -19,7 +19,14 @@ const Tasks = db.define("tasks", {
   },
 });
 
-//Tasks.belongsTo(Collections);
+Tasks.belongsTo(Collections, {
+    constraints: true,
+    foreignKey: 'idCollections',
+});
+
+Collections.hasMany(Tasks, {
+    foreignKey: 'idCollections',
+});
 
 (async () => {
     db.sync()

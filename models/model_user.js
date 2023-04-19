@@ -7,7 +7,7 @@ const User = db.define("user", {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-        validate: {
+        validade: {
             isEmail: true,
         },
         primaryKey:true,

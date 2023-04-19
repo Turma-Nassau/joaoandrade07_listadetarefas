@@ -9,11 +9,11 @@ router.get("/", controller.getAll);
 
 router.post("/", controller.createUser);
 
-router.get("/:id", controller.getUserById);
+router.get("/:email", controller.getUserById);
 
-router.patch("/:id", controller.updateUser);
+router.patch("/:email", controller.updateUser);
 
-router.delete("/:id", controller.deleteUser)
+router.delete("/:email", controller.deleteUser)
 
 // router.get("/api/users", (req, res) => {
 //   var sql = "select * from user";

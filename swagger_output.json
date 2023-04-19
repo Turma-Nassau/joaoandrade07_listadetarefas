@@ -56,12 +56,12 @@
         }
       }
     },
-    "/api/user/{id}": {
+    "/api/user/{email}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "email",
             "in": "path",
             "required": true,
             "type": "string"
@@ -80,7 +80,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "email",
             "in": "path",
             "required": true,
             "type": "string"
@@ -120,7 +120,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "email",
             "in": "path",
             "required": true,
             "type": "string"
@@ -157,9 +157,33 @@
               "properties": {
                 "title": {
                   "example": "any"
+                },
+                "emailUser": {
+                  "example": "any"
                 }
               }
             }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/collections/{emailUser}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "emailUser",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -248,9 +272,33 @@
                 },
                 "situation": {
                   "example": "any"
+                },
+                "idCollections": {
+                  "example": "any"
                 }
               }
             }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/tasks/{idCollections}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "idCollections",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
